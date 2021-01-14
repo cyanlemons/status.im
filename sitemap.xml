@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://status.im/user_guides/index.html</loc>
+    
+    <lastmod>2021-01-14T18:48:27.034Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://status.im/user_guides/desktop_beta_install.html</loc>
+    
+    <lastmod>2021-01-14T18:48:27.034Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://status.im/criptomaniacos/index.html</loc>
     
     <lastmod>2020-12-17T12:21:11.031Z</lastmod>
@@ -31,13 +45,6 @@
   
   <url>
     <loc>https://status.im/work/template.html</loc>
-    
-    <lastmod>2020-11-23T03:15:57.332Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://status.im/user_guides/index.html</loc>
     
     <lastmod>2020-11-23T03:15:57.332Z</lastmod>
     
