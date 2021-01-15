@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://status.im/technical/index.html</loc>
+    
+    <lastmod>2021-01-15T07:49:22.573Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://status.im/user_guides/index.html</loc>
     
     <lastmod>2021-01-14T18:48:27.034Z</lastmod>
@@ -80,13 +87,6 @@
   
   <url>
     <loc>https://status.im/technical/index-oos.html</loc>
-    
-    <lastmod>2020-11-23T03:15:57.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://status.im/technical/index.html</loc>
     
     <lastmod>2020-11-23T03:15:57.328Z</lastmod>
     
