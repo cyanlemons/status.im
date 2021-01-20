@@ -552,6 +552,9 @@
 <h3 id="Requirements" class="article-heading"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements<a class="article-anchor" href="#Requirements" aria-hidden="true"></a></h3><p>A machine running Linux or MacOS is required. It is entirely possible to run a Status Node on a physical machine in a local network, but for full functionality it would require a public and static IP address via which the service can be accessed.</p>
 <p>An alternative would be to use a <a href="https://en.wikipedia.org/wiki/Cloud_computing" target="_blank" rel="noopener">cloud service provider</a> which would provide you with a public and static IP out of the box in most cases. Using a cloud service would also provide you with the high uptime necessary to collect as many envelopes as possible for later retrieval.</p>
 <p>A single instance with 1GB of RAM and 1 vCPU should be enough to run Status Node reliably.</p>
+<p>In terms of software the minimum would include <code>make</code> and <code>jq</code>. If you want to build <code>status-go</code> you will also need <code>golang</code>, version <code>1.13</code> or higher.<br>A nice-to-have is <code>qrencode</code> to display q QR Code with your <code>enode://</code> address.</p>
+<p>For Ubuntu <code>20.04</code> you can just do:</p>
+<pre><code>sudo apt install make jq golang qrencode</code></pre>
 <h3 id="Ports" class="article-heading"><a href="#Ports" class="headerlink" title="Ports"></a>Ports<a class="article-anchor" href="#Ports" aria-hidden="true"></a></h3><ul>
 <li><code>30303</code> TCP/UDP - <a href="https://github.com/ethereum/devp2p" target="_blank" rel="noopener">DevP2P</a> wire protocol port. Must <strong>ALWAYS</strong> be public.</li>
 <li><code>8545</code> TCP - <a href="https://github.com/ethereum/wiki/wiki/json-rpc" target="_blank" rel="noopener">JSON RPC</a> management port. Must <strong>NEVER</strong> be public.</li>
@@ -564,8 +567,9 @@
 <pre><code class="sh">make run-mailserver-systemd</code></pre>
 <p>To get a Status node running inside of docker or as a systemd service respectively.<br>For more details read their own <code>README</code> files: <a href="https://github.com/status-im/status-go/blob/develop/_assets/compose/mailserver" target="_blank" rel="noopener">docker</a> and <a href="https://github.com/status-im/status-go/blob/develop/_assets/systemd/mailserver" target="_blank" rel="noopener">systemd</a>.</p>
 <h2 id="Manual-Approach" class="article-heading"><a href="#Manual-Approach" class="headerlink" title="Manual Approach"></a>Manual Approach<a class="article-anchor" href="#Manual-Approach" aria-hidden="true"></a></h2><h3 id="Building" class="article-heading"><a href="#Building" class="headerlink" title="Building"></a>Building<a class="article-anchor" href="#Building" aria-hidden="true"></a></h3><p>First you’ll have to build a <code>statusd</code> binary. To do that simply do:</p>
-<pre><code>git clone https://github.com/status-im/status-go
-cd status-go
+<pre><code>mkdir ~/go/src/github.com/status-im
+git clone https://github.com/status-im/status-go ~/go/src/github.com/status-im/status-go
+cd ~/go/src/github.com/status-im/status-go
 make statusgo</code></pre>
 <p>For more information visit <a href="./build_status/status_go.html">this page</a>.</p>
 <h3 id="Running" class="article-heading"><a href="#Running" class="headerlink" title="Running"></a>Running<a class="article-anchor" href="#Running" aria-hidden="true"></a></h3><p>You can check the available options using the <code>-h</code>/<code>--help</code> flags:</p>
